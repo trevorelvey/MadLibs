@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
                     String noun3 = mEditNoun3.getText().toString();
                     String verb = mEditVerb.getText().toString();
                     String adjective = mEditAdjective.getText().toString();
-                    Log.d(TAG, noun1);
-                    Log.d(TAG, noun2);
-                    Log.d(TAG, noun3);
-                    Log.d(TAG, verb);
-                    Log.d(TAG, adjective);
                     Intent intent = new Intent(MainActivity.this, Madlib.class);
+                    intent.putExtra("noun1", noun1);
+                    intent.putExtra("noun2", noun2);
+                    intent.putExtra("noun3", noun3);
+                    intent.putExtra("verb", verb);
+                    intent.putExtra("adjective", adjective);
                     startActivity(intent);
                 }
             });
